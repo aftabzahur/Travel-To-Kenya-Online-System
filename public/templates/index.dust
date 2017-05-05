@@ -1,0 +1,46 @@
+{>"layouts/master" /}
+
+{<body}
+
+	<ul data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;
+				  timer_speed: 1000;
+                  pause_on_hover:true;
+                  animation_speed:500;
+                  navigation_arrows:true;
+                  bullets:true;">
+  <li>
+    <img src="/img/TRAVEL1.png" alt="slide 1" />
+    <div class="orbit-caption">
+      Travel to Diani Beach.
+    </div>
+  </li>
+  <li class="active">
+    <img src="/img/TRAVEL2.png" alt="slide 2" />
+    <div class="orbit-caption">
+      Travel To Mida Creek.
+    </div>
+  </li>
+  <li>
+    <img src="/img/TRAVEL3.png" alt="slide 3" />
+    <div class="orbit-caption">
+      Travel To Kisumu Impala Sanctuary.
+    </div>
+    </li>
+	</ul>
+
+  {#books}
+    <div class="large-3 columns book">
+      <img src="/img/{.cover}">
+      <h4>{.packagename}</h4>
+      <p>{.description}</p>
+      <div class="price">Book it for <span>${.price}</span></div>
+      <br>
+      <a href="/books/details/{._id}" class="button small">Location Details</a>
+    </div>
+  {/books}
+
+    
+  <script src="js/vendor/jquery.js"></script>
+	<script src="js/foundation/foundation.js"></script>
+	<script src="js/foundation/foundation.orbit.js"></script>
+{/body}

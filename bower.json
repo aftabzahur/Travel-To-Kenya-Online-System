@@ -1,0 +1,21 @@
+{
+  "name": "travel-to-kenya",
+  "description": "Simple webapp",
+  "main": "index.js",
+  "author": "Aftab Zahur",
+  "moduleType": [
+    "amd"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "^2.1.16"
+  }
+}

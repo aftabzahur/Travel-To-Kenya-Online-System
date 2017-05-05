@@ -1,0 +1,28 @@
+{>"layouts/manage" /}
+
+{<body}
+	<h2>Books<h2>
+	<p><a href="/manage/books/add">Add Tour Packages</a></p>
+	 <table>
+	  <thead>
+	    <tr>
+	      <th width="200">ID</th>
+	      <th width="200">Tour Title</th>
+	      <th width="150">Category</th>
+	      <th width="180"></th>
+	      <th width="180"></th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  {#books}
+	    <tr>
+	      <td>{._id}</td>
+	      <td>{.packagename}</td>
+	      <td>{.category}</td>
+	      <td><a class="button tiny" href="/manage/books/edit/{._id}">Edit</a></td>
+	      <td><a class="button tiny alert removeBook" href="#">Delete</a></td>
+	   {/books}
+	    </tr>
+	  </tbody>
+	</table>
+{/body}
