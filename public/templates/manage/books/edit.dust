@@ -1,0 +1,70 @@
+{>"layouts/manage" /}
+
+{<body}
+	<div class="row">
+		<div class="large-12 columns">
+			<h2>Edit Package</h2>
+			<form method="post" action="/manage/books/edit/{book._id}">
+			<input type="hidden" name="_csrf" value="{_csrf}" />
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Tour Title
+							<input type="text" name="packagename" value="{book.packagename}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Description
+							<textarea name="description">{book.description}</textarea>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Category
+							<select name="category">
+							{#categories}
+								<option vallue="{.name}">{.name}</option>
+							{/categories}
+							</select>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Passengers
+							<input type="text" name="passengers" value="{book.passengers}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Hotel
+							<input type="text" name="hotel" value="{book.hotel}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Price
+							<input type="text" name="price" value="{book.price}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Cover URL
+							<input type="text" name="cover" value="{book.cover}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<input type="submit" class="button" value="Submit">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+{/body}

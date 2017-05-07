@@ -1,0 +1,16 @@
+{>"layouts/master" /}
+{<title}
+	About Travel To Kenya Online System
+{/title}
+
+{<body}
+	<div class="row">
+		<div class="large-12 columns">
+			<h2>About Us</h2>
+			<p>With more than 65 years of travel experience, Travel To Kenya has the expert knowledge to curate one-of- a-kind tourism vacation for every type of traveler. We offer hand-selected hotels, unique experiences, and exclusive services to destinations around the globe, and with 24/7 support, you can travel with confidence knowing Travel To Kenya is there for you throughout your adventures.
+</p>
+<p>
+Travel To Kenya offers an extensive range of Tour packages, including exclusive perks to iconic cities and epic destinations in Kenya. From our Escapes Indian Ocean beach getaways and short EURObreaks, USAbreaks, and CANADAbreaks, to our longer Journeys vacation packages, Travel To Kenya will craft your next relaxing and exciting getaway with exclusive perks you won’t find anywhere else. Our My Time properties further enhance your vacation with unique recognition, special amenities, and services that go beyond your expectations.</p>
+		</div>
+	</div>
+{/body}
