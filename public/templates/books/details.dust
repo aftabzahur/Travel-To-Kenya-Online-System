@@ -1,22 +1,131 @@
 {>"layouts/master" /}
 
 {<body}
+			<ul data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;
+							  timer_speed: 1000;
+			                  pause_on_hover:true;
+			                  animation_speed:500;
+			                  navigation_arrows:true;
+			                  bullets:true;">
+			  <li>
+			    <img src="/img/Diani1.jpg"  alt="slide 1" />
+			    <div class="orbit-caption">
+			      Travel to Diani Beach.
+			    </div>
+			  </li>
+			  <li class="active">
+			    <img src="/img/Diani2.jpg" height="1280" width="1080" alt="slide 2" />
+			    <div class="orbit-caption">
+			      Travel To Diani Beach
+			    </div>
+			  </li>
+			  <li>
+			    <img src="/img/Diani3.jpg" height="1280" width="1080" alt="slide 3" />
+			    <div class="orbit-caption">
+			      Travel To Diani Beach
+			    </div>
+			    </li>
+				</ul>
+
+	<h1>About Diani Beach</h1>
+	<p>Diani Beach is a major beach resort on the Indian Ocean coast of Kenya (in eastern Africa). It is located 30 kilometres (19 mi) south of Mombasa, in the nearby Kwale County.
+	The beach is about 10 kilometres (6 mi) long, from the Kongo river to the north and Galu beach to the south (the southern point of reference is an old Baobab tree). It is adjacent to the town of Ukunda, the population of which nears 100,000 inhabitants. A small airstrip is located between the beach area and the Mombasa-Lunga Lunga road. The water remains shallow near shore, with some underwater sandbars near the surface which allow wading with a clear view of the sandy bottom. Inland from the beach, there is extensive vegetation (see photo at right), including numerous palm trees which cover the coastal areas, unlike the dry acacia trees of the mountainous Kenyan Highlands. The Mwachema River flows into the sea at Diani Beach.
+
+	The general area is known for its coral reefs, black-and-white colobus monkeys, and for the closely located Shimba Hills National Reserve, a wildlife reserve which looks out over the Indian Ocean. Diani Beach has restaurants, hotels, supermarkets, and several shopping centres.
+
+	Diani Beach is also a popular kitesurfing location<p>
+
+	<h1>Features of Diani Beach</h1>
+	<p><h3>1.Exciting Beach</h3>
+	<p>Diani Beach ought to fulfil most dreams about the archetypal palm-fringed paradise. The sand is soft and brilliantly white; the sea is turquoise and usually crystal-clear; the reef is a safe thirty-minute swim or a ten-minute boat ride away; and, arching overhead, the coconut palms create pools of cool shade and keep up a perpetual slow sway as the breeze rustles through their fronds. While competition for space always threatens to mar Diani’s paradisal qualities, the recent downturn in tourism has knocked out some of the hotels, while the droves of hustlers, or “beach boys”, dwindled to a few relatively easily brushed-off diehards.
+
+	Security has been tightened up, with askaris posted all the way along the beach outside every property, and tight security at hotel entrances.
+
+	Running 300m behind the beach and separated from it by bush, the Diani Beach road feels – in the high season – like Kenya’s number-one strip. Fortunately, forest and scrubby bush separate the road from the shore, although more of the Diani Forest disappears every year as one new plot after another is cleared.
+	<br>
+	<h3>2.Adventurous Diani Forest</h3>
+	<p>For a walk, or a jog, head south along the Diani Beach road, which has more shade than the northern stretch. Towards the end of the tarmac surface are some wonderful patches of jungle, comprising the dwindling Jadini or more correctly Diani Forest (“Jadini”, disappointingly, turns out to be an embellished acronym made from the initials of members of a white settler family who once owned most of the land around here). There’s the almost obligatory snake park, but if you’d like to search for some animals in the wild rather than support this venture, then take one of several tracks leading off inland that will take you straight into magnificent areas of hardwood forest, alive with birds and butterflies, and rocking with vervet and colobus monkeys. The most impressive stands of forest are the isolated kayas, or sacred groves, of which there are at least three along the Diani Beach road: Kaya Diani, on the north side of the Leisure Lodge golf course (easy to drive or walk to the edge of the forest, and several trees have plaques proclaiming the grove’s status); Kaya Ukunda, west of the entrance to Diani Sea Lodge; and Kaya Kinondo, south of Pinewood Beach Resort. Kinondo is the first kaya to be officially opened to visitors. 
+	</p></p>
+
 	<div class="row">
-	<div class="large-4 columns">
+	<div class="large-12 columns">
+		<h2>{book.packagename}</h2>
 		<img src="/img/{book.cover}">
 	</div>
 	<div class="large-8 columns">
-		<h2>{book.packagename}</h2>
 		<u1 class="bookInfo">
-			<li>Category: {book.category}</li>
-			<li>Passengers: {book.passengers}</li>
-			<li>Hotel: {book.hotel}</li>	
+		<p>{book.description}</p>
+
+		<!-- <li>Category: {book.category}</li> -->
+		
 		</u1>
 		<br>
-		<div class="price"><span>${book.price}</span></div>
-		<br>
-		<p>{book.description}</p>
-		<a class="button success">Add To Cart</a>
+
+
+		
+		<!--<form method="post" action="/cart/{book._id}">
+			<input type="submit" class="button success" value="Add To Cart">
+			<input type="hidden" value="{_csrf}" name="_csrf" />
+		</form>-->
+		<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                <fieldset>
+                    <input type="hidden" name="cmd" value="_cart" />
+                    <input type="hidden" name="add" value="1" />
+                    <input type="hidden" name="business" value="example@minicartjs.com" />
+                    <input type="hidden" name="item_name" value="Guided Tour Booking for Diani Beach" />
+                    <input type="hidden" name="quantity" value="1" />
+                    <input type="hidden" name="currency_code" value="USD" />
+                    <input type="hidden" name="return" value="http://localhost:8000" />
+                    <input type="hidden" name="cancel_return" value="http://localhost:8000" />
+                    <strong>Guided Tour Booking for Diani Beach</strong>
+                    <ul>
+                        <li><label>Category
+							<select name="os0">
+								<option value="One Person Package">One Person Package for $120</option>
+								<option value="Honeymoon Package">Honeymoon Package for $200</option>
+								<option value="Family Package">Family Package for ${book.price}</option>
+							</select>
+						</label>	
+                            
+                            <input type="hidden" name="on0" value="Type" />
+                            <input type="hidden" name="option_select0" value="One Person Package" />
+                            <input type="hidden" name="option_amount0" value="120.00" />
+                            <input type="hidden" name="option_select1" value="Honeymoon Package" />
+                            <input type="hidden" name="option_amount1" value="200.00" />
+                            <input type="hidden" name="option_select2" value="Family Package" />
+                            <input type="hidden" name="option_amount2" value="{book.price}" />
+                        </li>
+                    </ul>
+                    <input type="submit" name="submit" value="Add to cart" class="button" />
+                </fieldset>
+            </form>
+
+            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" class="last">
+                <fieldset>
+                    <input type="hidden" name="business" value="example@minicartjs.com" />
+                    <input type="hidden" name="cmd" value="_cart" />
+                    <input type="hidden" name="display" value="1" />
+                    <input type="submit" name="submit" value="View your cart" class="button" />
+                </fieldset>
+            </form>
+
+            <script src="//cdnjs.cloudflare.com/ajax/libs/minicart/3.0.6/minicart.min.js"></script>
+				<script>
+				    paypal.minicart.render();
+				</script>
+
+		
+		<p>You can click below to see the location using Google Map<p>
+		<a href="/books/googlemap/{.google}" class="button1" target="_blank">GoogleMap</a>
 	</div>
-	</div>	
+	</div>
+
+	<h1>Hotel Booking</h1>
+	<p>The best hotels around Diani Beach that is very attractive are:
+	<li><a href="/books/1/">Diani Sea Resort</a></li>
+	<li><a href="/books/2">Diani Sea Lodge</a></li>
+	<li><a href="/books/3">Lofta Resort Diani</a></li>
+	You can book the hotels by clicking on the above links.
+	<p>
+
 {/body}

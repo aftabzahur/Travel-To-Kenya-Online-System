@@ -1,0 +1,129 @@
+{>"layouts/manage" /}
+
+{<body}
+	<div class="row">
+		<div class="large-12 columns">
+			<h2>Edit Nairobi Package</h2>
+			<form method="post" action="/manage/nairobis/edit/{nairobi._id}">
+			<input type="hidden" name="_csrf" value="{_csrf}" />
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Nairobi Site
+							<input type="text" name="site"  value="{nairobi.site}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Description
+							<textarea name="description">{nairobi.description}</textarea>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>About
+							<textarea name="about">{nairobi.about}</textarea>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Feature Heading 1
+							<input name="featureheading1" type="text" value="{nairobi.featureheading1}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Feature Content 1
+							<textarea name="featurecontent1">{nairobi.featurecontent1}</textarea>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Feature Heading 2
+							<input name="featureheading2" type="text" value="{nairobi.featureheading2}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Feature Content 2
+							<textarea name="featurecontent2">{nairobi.featurecontent2}</textarea>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>GoogleMap Latitude
+							<input name="latitude" type="number" value="{nairobi.latitude}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>GoogleMap Longitude
+							<input name="longitude" type="number" value="{nairobi.longitude}"/>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Cover URL
+							<input name="cover" type="text" value="{nairobi.cover}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Image One URL
+							<input name="image1" type="text" value="{nairobi.image1}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Image Two URL
+							<input name="image2" type="text" value="{nairobi.image2}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Image Three URL
+							<input name="image3" type="text" value="{nairobi.image3}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Price for One Person Package
+							<input name="priceo" type="number" value="{nairobi.priceo}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Price for Honeymoon Package
+							<input name="priceh" type="number" value="{nairobi.priceh}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Price for Family Package
+							<input name="pricef" type="number" value="{nairobi.pricef}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<input type="submit" class="button" value="Submit">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+{/body}

@@ -33,4 +33,39 @@ $(document).ready(function(){
 		window.location = '/manage/categories';
 	});
 
+	$('.removeMombasa').click(function(e){
+		deleteId = $(this).data('id');
+		if (confirm("Do you want to delete this Mombasa Package?") == true) {
+ 			   txt = "You pressed OK!";
+				} else {
+    			return;
+				}
+		$.ajax({
+			url:'/manage/mombasas/delete/' +deleteId,
+			type: 'DELETE',
+			success: function(){
+
+			}
+		});
+		window.location = '/manage/mombasas';
+	});
+
+	$('.removeCustomers').click(function(e){
+		deleteId = $(this).data('id');
+		if (confirm("Do you want to delete this Request?") == true) {
+ 			   txt = "You pressed OK!";
+				} else {
+    			return;
+				}
+		$.ajax({
+			url:'/manage/customers/delete/' +deleteId,
+			type: 'DELETE',
+			success: function(){
+
+			}
+		});
+		window.location = '/manage/customers';
+	});
 });
+
+

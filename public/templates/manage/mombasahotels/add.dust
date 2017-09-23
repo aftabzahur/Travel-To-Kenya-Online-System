@@ -1,0 +1,94 @@
+{>"layouts/manage" /}
+
+{<body}
+	<div class="row">
+		<div class="large-12 columns">
+			<h2>Add Hotel</h2>
+			<form method="post" action="/manage/mombasahotels">
+			<input type="hidden" name="_csrf" value="{_csrf}" />
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Mombasa Hotel Name
+							<input name="hotelname" type="text" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Cover URL
+							<input name="cover" type="text" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Description
+							<textarea name="description"></textarea>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Price per night
+							<input name="price" type="number" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Rating
+							<input name="rating" type="number" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>About
+							<textarea name="about"></textarea>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Feature Heading 1
+							<input name="featureheading1" type="text" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Feature Content 1
+							<textarea name="featurecontent1"></textarea>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Image One URL
+							<input name="image1" type="text" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Image Two URL
+							<input name="image2" type="text" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Image Three URL
+							<input name="image3" type="text" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<input type="submit" class="button" value="Submit">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+{/body}

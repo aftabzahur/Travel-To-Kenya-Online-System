@@ -1,0 +1,182 @@
+{>"layouts/master" /}
+
+{<body}
+			<ul data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;
+							  timer_speed: 1000;
+			                  pause_on_hover:true;
+			                  animation_speed:500;
+			                  navigation_arrows:true;
+			                  bullets:true;">
+			  <li>
+			    <img src="/img/Diani1.jpg"  alt="slide 1" />
+			    <div class="orbit-caption">
+			      Travel to Diani Beach.
+			    </div>
+			  </li>
+			  <li class="active">
+			    <img src="/img/Diani2.jpg" height="1280" width="1080" alt="slide 2" />
+			    <div class="orbit-caption">
+			      Travel To Diani Beach
+			    </div>
+			  </li>
+			  <li>
+			    <img src="/img/Diani3.jpg" height="1280" width="1080" alt="slide 3" />
+			    <div class="orbit-caption">
+			      Travel To Diani Beach
+			    </div>
+			    </li>
+				</ul>
+
+
+				<div class="row">
+				<div class="large-12 columns">
+					<h2>Hotel Booking</h2>
+					
+						<div class="row">
+							<div class="large-12 columns">
+							<label>Check in Date
+								<select name="check_in_date" type="date" placeholder="dd/mm/yyyy" />
+									<option value="12/05/2017">12/05/2017</option>
+									<option value="13/05/2017">13/05/2017</option>
+									<option value="14/05/2017">14/05/2017</option>
+									<option value="15/05/2017">15/05/2017</option>
+									<option value="16/05/2017">16/05/2017</option>
+									<option value="17/05/2017">17/05/2017</option>
+									<option value="18/05/2017">18/05/2017</option>
+									<option value="19/05/2017">19/05/2017</option>
+									<option value="20/05/2017">20/05/2017</option>
+									<option value="21/05/2017">21/05/2017</option>
+									<option value="22/05/2017">22/05/2017</option>
+									<option value="23/05/2017">23/05/2017</option>
+									<option value="24/05/2017">24/05/2017</option>
+									<option value="25/05/2017">25/05/2017</option>
+									<option value="26/05/2017">26/05/2017</option>
+									<option value="27/05/2017">27/05/2017</option>
+									<option value="28/05/2017">28/05/2017</option>
+									<option value="29/05/2017">29/05/2017</option>
+									<option value="30/05/2017">30/05/2017</option>
+									<option value="31/05/2017">31/05/2017</option>
+								</select>
+							</label>
+							</div>	
+				<!--<div class="row">
+					<div class="large-12 columns">
+					<label>Category
+							<select name="category">
+								<option value="1">One Person Package</option>
+								<option value="2">Honeymoon Package</option>
+								<option value="4">Family Package</option>
+							</select>
+						</label>	
+				</div>
+				</div>-->
+				
+				<div class="row">
+				<div class="large-12 columns">
+				<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+				<fieldset>
+                    <input type="hidden" name="cmd" value="_cart" />
+                    <input type="hidden" name="add" value="1" />
+                    <input type="hidden" name="business" value="example@minicartjs.com" />
+                    <input type="hidden" name="item_name" value="Hotel Booking for Diana Sea Resort" />
+                    <input type="hidden" name="quantity" value="1" />
+                    <input type="hidden" name="currency_code" value="USD" />
+                    <input type="hidden" name="return" value="http://localhost:8000" />
+                    <input type="hidden" name="cancel_return" value="http://localhost:8000/books/1" />
+                    <strong>Hotel Booking for Diana Sea Resort</strong>
+                    <u1>
+						<li>
+					<label>Days to stay at hotel
+						<select name="os0">
+							<option value="1 day">1 day for $100</option>
+							<option value="2 days">2 days for $180</option>
+							<option value="3 days">3 days for $260</option>
+							<option value="4 days">4 days for $320</option>
+							<option value="5 days">5 days for $400</option>
+							<option value="6 days">6 days for $480</option>
+							<option value="7 days">7 days for $540</option>
+							<option value="8 days">8 days for $620</option>
+							<option value="9 days">9 days for $700</option>
+							<option value="10 days">10 days for $780</option>
+							<option value="11 days">11 days for $800</option>
+							<option value="12 days">12 days for $880</option>
+							<option value="13 days">13 days for $960</option>
+							<option value="14 days">14 days for $1020</option>
+							<option value="15 days">15days for $1080</option>
+						</select>
+					</label>
+					 <input type="hidden" name="on0" value="Type" />
+                            <input type="hidden" name="option_select0" value="1 day" />
+                            <input type="hidden" name="option_amount0" value="100.00" />
+                            <input type="hidden" name="option_select1" value="2 days" />
+                            <input type="hidden" name="option_amount1" value="180.00" />
+                            <input type="hidden" name="option_select2" value="3 days" />
+                            <input type="hidden" name="option_amount2" value="260.00" />
+                            <input type="hidden" name="option_select3" value="4 days" />
+                            <input type="hidden" name="option_amount3" value="320.00" />
+                            <input type="hidden" name="option_select4" value="5 days" />
+                            <input type="hidden" name="option_amount4" value="400.00" />
+                            <input type="hidden" name="option_select5" value="6 days" />
+                            <input type="hidden" name="option_amount5" value="480.00" />
+                            <input type="hidden" name="option_select6" value="7 days" />
+                            <input type="hidden" name="option_amount6" value="540.00" />
+                            <input type="hidden" name="option_select7" value="8 days" />
+                            <input type="hidden" name="option_amount7" value="620.00" />
+                            <input type="hidden" name="option_select8" value="9 days" />
+                            <input type="hidden" name="option_amount8" value="700.00" />
+                            <input type="hidden" name="option_select9" value="10 days" />
+                            <input type="hidden" name="option_amount9" value="780.00" />
+                            <input type="hidden" name="option_select10" value="11 days" />
+                            <input type="hidden" name="option_amount10" value="800.00" />
+                            <input type="hidden" name="option_select11" value="12 days" />
+                            <input type="hidden" name="option_amount11" value="880.00" />
+                            <input type="hidden" name="option_select12" value="13 days" />
+                            <input type="hidden" name="option_amount12" value="960.00" />
+                            <input type="hidden" name="option_select13" value="14 days" />
+                            <input type="hidden" name="option_amount13" value="1020.00" />
+                            <input type="hidden" name="option_select14" value="15 days" />
+                            <input type="hidden" name="option_amount14" value="1080.00" />
+                        </li>
+                    </ul>
+					</div>
+					</div>
+                    <input type="submit" name="submit" value="Add to cart" class="button" />
+                </fieldset>
+            </form>
+
+           <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" class="last">
+                <fieldset>
+                    <input type="hidden" name="business" value="example@minicartjs.com" />
+                    <input type="hidden" name="cmd" value="_cart" />
+                    <input type="hidden" name="display" value="1" />
+                    <input type="submit" name="submit" value="View your cart" class="button" />
+                </fieldset>
+            </form>
+
+
+
+<head>
+     <script language="javascript">
+     function multiply(){
+     var ans= (document.form.one.value)*(document.form.two.value)
+     document.form.answer.value=ans;
+     }
+     </script>
+
+
+</head>
+
+<form name="form">
+<input type="text" name="one" size="2">
+<input type="text" name="two" size="2">
+<input type="text" name="answer" size="2">
+<input type="button" value="answer" name="now" onClick="multiply()"></form>
+ 
+        
+		<script src="//cdnjs.cloudflare.com/ajax/libs/minicart/3.0.6/minicart.min.js"></script>
+		<script>
+		    paypal.minicart.render();
+		</script>
+
+
+{/body}				

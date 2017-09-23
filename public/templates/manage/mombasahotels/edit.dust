@@ -1,0 +1,97 @@
+{>"layouts/manage" /}
+
+{<body}
+	<div class="row">
+		<div class="large-12 columns">
+			<h2>Edit Mombasa Hotel</h2>
+			<form method="post" action="/manage/mombasahotels/edit/{mombasahotel._id}">
+			<input type="hidden" name="_csrf" value="{_csrf}" />
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Mombasa Hotel Name
+							<input type="text" name="hotelname"  value="{mombasahotel.hotelname}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Cover URL
+							<input name="cover" type="text" value="{mombasahotel.cover}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Description
+							<textarea name="description">{mombasahotel.description}</textarea>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Price per night
+							<input name="price" type="number" value="{mombasahotel.price}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Rating
+							<input name="rating" type="number" value="{mombasahotel.rating}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>About
+							<textarea name="about">{mombasahotel.about}</textarea>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Feature Heading 1
+							<input name="featureheading1" type="text" value="{mombasahotel.featureheading1}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Feature Content 1
+							<textarea name="featurecontent1">{mombasahotel.featurecontent1}</textarea>
+						</label>
+					</div>
+				</div>
+				
+				
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Image One URL
+							<input name="image1" type="text" value="{mombasahotel.image1}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Image Two URL
+							<input name="image2" type="text" value="{mombasahotel.image2}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Image Three URL
+							<input name="image3" type="text" value="{mombasahotel.image3}" />
+						</label>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="large-12 columns">
+						<input type="submit" class="button" value="Submit">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+{/body}

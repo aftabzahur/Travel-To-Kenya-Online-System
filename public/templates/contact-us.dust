@@ -1,0 +1,13 @@
+{>"layouts/master" /}
+
+{<body}
+<div id="container">
+<h1>Contact Us</h1>
+<!--<input type="text" id="to" placeholder="aftabzahur@gmail.com"><br>-->
+<input type="text" id="subject" placeholder="Write Subject"><br>
+<textarea id="content" rows="5" cols="40" placeholder="Write what you want to send"></textarea><br>
+<button id="send_email">Send Email</button><br>
+<span id="message"></span>
+</div>
+
+{/body}

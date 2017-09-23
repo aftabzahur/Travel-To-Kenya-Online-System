@@ -1,0 +1,35 @@
+{>"layouts/manage" /}
+
+{<body}
+   <table>
+    <thead>
+      <tr>
+        <th width="200">Customer Name</th>
+        <th width="200">Origin</th>
+        <th width="150">Email</th>
+        <th width="150">Duration of Stay</th>
+        <th width="150">Check in date</th>
+        <th width="150">Passport Number</th>
+        <th width="150">Number of Persons</th>
+        <th width="150">Phone Number</th>
+      </tr>
+    </thead>
+    <tbody>
+    {#customers}
+      <tr>
+        <td>{.customername}</td>
+        <td>{.origin}</td>
+        <td>{.email}</td>
+        <td>{.stayduration}</td>
+        <td>{.check_in_date}</td>
+        <td>{.passportnumber}</td>
+        <td>{.passengers}</td>
+        <td{.phone}</td>     
+      </tr>
+    {/customers}
+    </tbody>
+  </table>
+
+
+  <p><a href="C:\Users\aftabzahur\Desktop\projects\Travel To Kenya\report.pdf">Open Report</a></p>
+ {/body}

@@ -1,0 +1,16 @@
+{>"layouts/master" /}
+
+{<body}
+<h3>Kisumu Hotels in Kenya</h3>
+{#kisumuhotels}
+<div class="large-3 columns book">
+      <img src="/img/{.cover}">
+      <h4>{.hotelname}</h4>
+      <p>{.description}</p>
+      <p>{.hotelrating}</p>
+      <div class="price">Special Hotel Booking per night at <span>${.price}</span></div>
+      <br>
+      <a href="/hotel/kisumuhotels/details/{._id}" class="button small">Hotel Details</a>
+    </div>
+{/kisumuhotels}
+{/body}

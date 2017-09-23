@@ -1,0 +1,28 @@
+{>"layouts/manage" /}
+
+{<body}
+	<h2>Tour Packages<h2>
+	<p><a href="/manage/nairobis/add">Add Nairobi Packages</a></p>
+	 <table>
+	  <thead>
+	    <tr>
+	      <th width="200">ID</th>
+	      <th width="200">Nairobi Sites</th>
+	      <th width="150">One Person Price Tag</th>
+	      <th width="180"></th>
+	      <th width="180"></th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  {#nairobis}
+	    <tr>
+	      <td>{._id}</td>
+	      <td>{.site}</td>
+	      <td>{.priceo}</td>
+	      <td><a class="button tiny" href="/manage/nairobis/edit/{._id}">Edit</a></td>
+	      <td><a class="button tiny alert removeNairobi" data-id="{._id}" href="#">Delete</a></td>
+	   {/nairobis}
+	    </tr>
+	  </tbody>
+	</table>
+{/body}

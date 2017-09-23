@@ -1,0 +1,30 @@
+{>"layouts/master" /}
+
+{<body}
+			<ul data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;
+							  timer_speed: 1000;
+			                  pause_on_hover:true;
+			                  animation_speed:500;
+			                  navigation_arrows:true;
+			                  bullets:true;">
+			  <li>
+			    <img src="/img/Diani1.jpg"  alt="slide 1" />
+			    <div class="orbit-caption">
+			      Travel to Diani Beach.
+			    </div>
+			  </li>
+			  <li class="active">
+			    <img src="/img/Diani2.jpg" height="1280" width="1080" alt="slide 2" />
+			    <div class="orbit-caption">
+			      Travel To Diani Beach
+			    </div>
+			  </li>
+			  <li>
+			    <img src="/img/Diani3.jpg" height="1280" width="1080" alt="slide 3" />
+			    <div class="orbit-caption">
+			      Travel To Diani Beach
+			    </div>
+			    </li>
+				</ul>
+
+{/body}				

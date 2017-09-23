@@ -2,9 +2,31 @@
 
 var express = require('express');
 var kraken = require('kraken-js');
+var nodemailer = require('nodemailer');
 var flash = require('connect-flash');
 var db = require('./lib/db')
+var wkhtmltopdf = require('wkhtmltopdf');
+// If you don't have wkhtmltopdf in the PATH, then provide
+// the path to the executable (in this case for windows would be):
 
+
+
+/*
+    Here we are configuring our SMTP Server details.
+    STMP is mail server which is responsible for sending and recieving email.
+*/
+
+var smtpTransport = nodemailer.createTransport({
+    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 587,
+    auth: {
+        user: 'aftabzahur@gmail.com',
+        pass: ''
+    },
+    tls: {rejectUnauthorized: false},
+    debug:true
+});
 
 var options, app;
 

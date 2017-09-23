@@ -1,0 +1,107 @@
+{>"layouts/master" /}
+
+{<body}
+  		<div class="row">
+		<div class="large-12 columns">
+			<h2>Book Hotel</h2>
+			<form method="post" action="/hotel/customers" data-abide>
+			<input type="hidden" name="_csrf" value="{_csrf}" />
+				<div class="row">
+ 					<div class="large-12 columns">
+						<label>Customer Name
+							<input name="customername" type="text" pattern="alpha" required />
+						</label>
+						<small class="error">Name is required and must be a string.</small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Origin
+							<input name="origin" type="text" pattern="alpha" required>
+						</label>
+						<small class="error">Origin is required and must be a string.</small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Passport Number
+							<input name="passportnumber" type="text" pattern="number" required >
+						</label>
+						<small class="error">Passport Number is required and must be a number.</small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Duration of Stay
+							<select name="stayduration">
+								<option value="1 Day">1 day</option>
+								<option value="2 Days">2 days</option>
+								<option value="3 Days">3 days</option>
+								<option value="4 Days">4 days</option>
+								<option value="5 Days">5 days</option>
+								<option value="6 Days">6 days</option>
+								<option value="7 Days">7 days</option>
+								<option value="8 Days">8 days</option>
+								<option value="9 Days">9 days</option>
+								<option value="10 Days">10 days</option>
+								<option value="11 Days">11 days</option>
+								<option value="12 Days">12 days</option>
+								<option value="13 Days">13 days</option>
+								<option value="14 Days">14 days</option>
+								<option value="15 Days">15 days</option>
+							</select>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Check in date
+						<input name="check_in_date" type="date" min="2017-05-31" max="2017-06-10" value="2017-05-30">
+  						</label>
+  					</div>
+  				</div>		
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Hotel Name
+							<select name="category">
+							{#mombasahotels}
+								<option value="{.hotelname}">{.hotelname}</option>
+							{/mombasahotels}
+							</select>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Number of Persons
+							<input name="passenger" type="number" required />
+						</label>
+						<small class="error">Number of Person is required and must be a number.</small>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Email
+							<input name="email" type="email" required />
+						</label>
+						<small class="error">An email address is required.</small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Phone Number
+							<input name="phone" type="tel" required />
+						</label>
+						<small class="error">Phone Number is required</small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<input type="submit" class="button" value="Submit">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+{/body}

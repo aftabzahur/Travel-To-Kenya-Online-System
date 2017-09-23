@@ -1,0 +1,28 @@
+{>"layouts/manage" /}
+
+{<body}
+	<h2>Hotels<h2>
+	<p><a href="/manage/mombasahotels/add">Add Mombasa Hotels</a></p>
+	 <table>
+	  <thead>
+	    <tr>
+	      <th width="200">ID</th>
+	      <th width="200">Mombasa Hotel Name</th>
+	      <th width="150">Price Per Night</th>
+	      <th width="180"></th>
+	      <th width="180"></th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  {#mombasahotels}
+	    <tr>
+	      <td>{._id}</td>
+	      <td>{.hotelname}</td>
+	      <td>{.price}</td>
+	      <td><a class="button tiny" href="/manage/mombasahotels/edit/{._id}">Edit</a></td>
+	      <td><a class="button tiny alert removeMombasahotel" data-id="{._id}" href="#">Delete</a></td>
+	   {/mombasahotels}
+	    </tr>
+	  </tbody>
+	</table>
+{/body}

@@ -28,16 +28,64 @@
     </li>
 	</ul>
 
-  {#books}
+<h3>Mombasa</h3>
+{#mombasas}
+<div class="large-3 columns book">
+      <img src="/img/{.cover}">
+      <h4>Travel to {.site}</h4>
+      <p>{.description}</p>
+      <div class="price">Special Booking for Family Package at <span>${.pricef}</span></div>
+      <br>
+      <a href="/destination/mombasa/details/{._id}" class="button small">Location Details</a>
+      <!--<a href="/books/googlemap" class="button1" target="_blank">GoogleMap</a>-->
+    </div>
+{/mombasas}
+
+ <hr/>
+
+ <h3>Kisumu</h3>
+
+ 	{#kisumus}
     <div class="large-3 columns book">
       <img src="/img/{.cover}">
-      <h4>{.packagename}</h4>
+      <h4>{.site}</h4>
       <p>{.description}</p>
-      <div class="price">Book it for <span>${.price}</span></div>
+      <div class="price">Special Booking for Family Package at <span>${.price}</span></div>
       <br>
-      <a href="/books/details/{._id}" class="button small">Location Details</a>
+      <a href="/destination/Kisumu/details/{._id}" class="button small">Location Details</a>
+      <!--<a href="/books/googlemap/1" class="button1" target="_blank">GoogleMap</a>-->
     </div>
-  {/books}
+    {/kisumus}
+
+<hr/>
+
+<h3>Nairobi</h3>
+
+	{#nairobis}
+		 <div class="large-3 columns book">
+		      <img src="/img/{.cover}">
+		      <h4>{.packagename}</h4>
+		      <p>{.description}</p>
+		      <div class="price">Special Booking for Family Package at <span>${.price}</span></div>
+		      <br>
+		      <a href="/books/details/{._id}" class="button small">Location Details</a>
+		      <!--<a href="/books/googlemap/3" class="button1" target="_blank">GoogleMap</a>-->
+		    </div>
+	{/nairobis}
+
+<!--<h3>Narok</h3>
+
+		{#books}
+		    <div class="large-3 columns book">
+		      <img src="/img/{.cover}">
+		      <h4>{.site}</h4>
+		      <p>{.description}</p>
+		      <div class="price">Special Booking for Family Package at <span>${.price}</span></div>
+		      <br>
+		      <a href="/books/details/{._id}" class="button small">Location Details</a>
+		      <a href="/books/googlemap/1" class="button1" target="_blank">GoogleMap</a>
+		    </div>
+		{/books}-->
 
     
   <script src="js/vendor/jquery.js"></script>

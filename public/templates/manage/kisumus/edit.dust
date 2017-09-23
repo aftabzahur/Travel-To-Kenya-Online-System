@@ -1,0 +1,129 @@
+{>"layouts/manage" /}
+
+{<body}
+	<div class="row">
+		<div class="large-12 columns">
+			<h2>Edit Kisumu Package</h2>
+			<form method="post" action="/manage/kisumus/edit/{kisumu._id}">
+			<input type="hidden" name="_csrf" value="{_csrf}" />
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Kisumu Site
+							<input type="text" name="site"  value="{kisumu.site}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Description
+							<textarea name="description">{kisumu.description}</textarea>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>About
+							<textarea name="about">{kisumu.about}</textarea>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Feature Heading 1
+							<input name="featureheading1" type="text" value="{kisumu.featureheading1}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Feature Content 1
+							<textarea name="featurecontent1">{kisumu.featurecontent1}</textarea>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Feature Heading 2
+							<input name="featureheading2" type="text" value="{kisumu.featureheading2}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Feature Content 2
+							<textarea name="featurecontent2">{kisumu.featurecontent2}</textarea>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>GoogleMap Latitude
+							<input name="latitude" type="number" value="{kisumu.latitude}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>GoogleMap Longitude
+							<input name="longitude" type="number" value="{kisumu.longitude}"/>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Cover URL
+							<input name="cover" type="text" value="{kisumu.cover}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Image One URL
+							<input name="image1" type="text" value="{kisumu.image1}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Image Two URL
+							<input name="image2" type="text" value="{kisumu.image2}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Image Three URL
+							<input name="image3" type="text" value="{kisumu.image3}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Price for One Person Package
+							<input name="priceo" type="number" value="{kisumu.priceo}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Price for Honeymoon Package
+							<input name="priceh" type="number" value="{kisumu.priceh}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Price for Family Package
+							<input name="pricef" type="number" value="{kisumu.pricef}" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<input type="submit" class="button" value="Submit">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+{/body}

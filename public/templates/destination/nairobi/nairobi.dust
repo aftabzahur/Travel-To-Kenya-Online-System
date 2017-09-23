@@ -1,0 +1,16 @@
+{>"layouts/master" /}
+
+{<body}
+	<h3>Nairobi Sites in Kenya</h3>
+{#nairobis}
+<div class="large-3 columns book">
+      <img src="/img/{.cover}">
+      <h4>Travel to {.site}</h4>
+      <p>{.description}</p>
+      <div class="price">Special Booking for Family Package at <span>${.pricef}</span></div>
+      <br>
+      <a href="/destination/nairobi/details/{._id}" class="button small">Location Details</a>
+      <a href="/destination/nairobi/googlemap/1" class="button1" target="_blank">GoogleMap</a>
+    </div>
+{/nairobis}
+{/body}

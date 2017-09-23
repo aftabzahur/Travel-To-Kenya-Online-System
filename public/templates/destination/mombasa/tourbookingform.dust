@@ -1,0 +1,99 @@
+{>"layouts/master" /}
+
+{<body}
+  		<div class="row">
+		<div class="large-12 columns">
+			<h2>Book Guided Tour Package</h2>
+			<form method="post" action="/destination/customertours" data-abide>
+			<input type="hidden" name="_csrf" value="{_csrf}" />
+				<div class="row">
+ 					<div class="large-12 columns">
+						<label>Customer Name
+							<input name="customername" type="text" pattern="alpha" required />
+						</label>
+						<small class="error">Name is required and must be a string.</small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Origin
+							<input name="origin" type="text" pattern="alpha" required>
+						</label>
+						<small class="error">Origin is required and must be a string.</small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Passport Number
+							<input name="passportnumber" type="text" pattern="number" required >
+						</label>
+						<small class="error">Passport Number is required and must be a number.</small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Type of car
+							<select name="car">
+								<option value="Game Viewer Toyota Landcruiser 70 Series">Game Viewer Toyota Landcruiser 70 Series</option>
+								<option value="Land Rover Game viewer">Land Rover Game viewer</option>
+								<option value="Hilux 4X4 Diesel game viewer">Hilux 4X4 Diesel game viewer</option>
+								<option value="Land Cruiser Game Viewer">Land Cruiser Game Viewer</option>
+							</select>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Check in date
+						<input name="check_in_date" type="date" min="2017-06-20" max="2017-06-30" value="2017-06-20">
+  						</label>
+  					</div>
+  				</div>
+  				<div class="row">
+					<div class="large-12 columns">
+						<label>Site to travel
+							<select name="site">
+							{#mombasas}
+								<option value="{.site}">{.site}</option>
+							{/mombasas}
+							</select>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Category
+							<select name="category">
+							{#categories}
+								<option value="{.name}">{.name}</option>
+							{/categories}
+							</select>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Email
+							<input name="email" type="email" required />
+						</label>
+						<small class="error">An email address is required.</small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<label>Phone Number
+							<input name="phone" type="tel" required />
+						</label>
+						<small class="error">Phone Number is required</small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<input type="submit" class="button" value="Submit">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+{/body}
+

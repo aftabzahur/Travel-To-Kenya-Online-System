@@ -1,0 +1,14 @@
+{>"layouts/master" /}
+
+{<body}
+
+<h3>Help Regarding How to Buy a Guided Tour Package</h3>
+<p>You first go to the homepage and then click on the Location Details button.
+After that you go and check on the details and then book the specific guided tour package by clicking on the Book Tour Now button.
+Then you fill the text boxes and finally you submit. After submitting you will get an Add to Cart button which will help you to pay the billing by using PayPal.</p>
+
+<h3>Help Regarding How to Book for a Hotel</h3>
+<p>You first go the Hotel Button and select on a choice of your destined hotel then you click on the hotel details. After that you click on the Book Hotel button. In that you will be directed to a hotel book form. In the hotel book form you are required to enter your details and submit it. After that you will receive feedback if the hotel is available.</p>
+
+
+{/body}

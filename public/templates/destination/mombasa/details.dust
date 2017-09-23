@@ -1,0 +1,121 @@
+{>"layouts/master" /}
+
+{<body}
+	{#mombasas}
+	
+
+			<ul data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;
+							  timer_speed: 1000;
+			                  pause_on_hover:true;
+			                  animation_speed:500;
+			                  navigation_arrows:true;
+			                  bullets:true;">
+			  <li>
+			    <img src="/img/{.image1}"  alt="slide 1" />
+			    <div class="orbit-caption">
+			      Travel to Diani Beach.
+			    </div>
+			  </li>
+			  <li class="active">
+			    <img src="/img/{.image2}" height="1280" width="1080" alt="slide 2" />
+			    <div class="orbit-caption">
+			      Travel To Diani Beach
+			    </div>
+			  </li>
+			  <li>
+			    <img src="/img/{.image3}" height="1280" width="1080" alt="slide 3" />
+			    <div class="orbit-caption">
+			      Travel To Diani Beach
+			    </div>
+			    </li>
+				</ul>
+
+<h1>About {.site}</h1>
+	<p>{.about}<p>
+
+	<h1>Features of {.site}</h1>
+	<h3>1.{.featureheading1}</h3>
+	<p>{.featurecontent1}</p>
+	<br>
+	<h3>2.{.featureheading2}</h3>
+	<p>{.featurecontent2}</p>
+	
+
+	<div class="row">
+	<div class="large-12 columns">
+		<h2>Tour To {.site}</h2>
+		<img src="/img/{.cover}">
+	</div>
+	<div class="large-12 columns">
+		<u1 class="bookInfo">
+		<p>{.description}</p>
+
+		<!-- <li>Category: {book.category}</li> -->
+		
+		</u1>
+		<br>
+
+
+		
+		<!--<form method="post" action="/cart/{book._id}">
+			<input type="submit" class="button success" value="Add To Cart">
+			<input type="hidden" value="{_csrf}" name="_csrf" />
+		</form>-->
+		<!--<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                <fieldset>
+                    <input type="hidden" name="cmd" value="_cart" />
+                    <input type="hidden" name="add" value="1" />
+                    <input type="hidden" name="business" value="example@minicartjs.com" />
+                    <input type="hidden" name="item_name" value="Guided Tour Booking for {.site}" />
+                    <input type="hidden" name="quantity" value="1" />
+                    <input type="hidden" name="currency_code" value="USD" />
+                    <input type="hidden" name="return" value="http://localhost:8000" />
+                    <input type="hidden" name="cancel_return" value="http://localhost:8000" />
+                    <strong>Guided Tour Booking for {.site}</strong>
+                    <ul>
+                        <li><label>Category
+							<select name="os0">
+								<option value="One Person Package">One Person Package for ${.priceo}</option>
+								<option value="Honeymoon Package">Honeymoon Package for ${.priceh}</option>
+								<option value="Family Package">Family Package for ${.pricef}</option>
+							</select>
+						</label>	
+                            
+                            <input type="hidden" name="on0" value="Type" />
+                            <input type="hidden" name="option_select0" value="One Person Package" />
+                            <input type="hidden" name="option_amount0" value="{.priceo}" />
+                            <input type="hidden" name="option_select1" value="Honeymoon Package" />
+                            <input type="hidden" name="option_amount1" value="{.priceh}" />
+                            <input type="hidden" name="option_select2" value="Family Package" />
+                            <input type="hidden" name="option_amount2" value="{.pricef}" />
+                        </li>
+                    </ul>
+                    <input type="submit" name="submit" value="Add to cart" class="button" />
+                </fieldset>
+            </form>
+
+            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" class="last">
+                <fieldset>
+                    <input type="hidden" name="business" value="example@minicartjs.com" />
+                    <input type="hidden" name="cmd" value="_cart" />
+                    <input type="hidden" name="display" value="1" />
+                    <input type="submit" name="submit" value="View your cart" class="button" />
+                </fieldset>
+            </form>-->
+
+            <form method="get" action="/destination/mombasa/tourbookingform">
+				<input type="submit" class="button success" value="Book Tour Now">
+			</form>
+
+            <script src="//cdnjs.cloudflare.com/ajax/libs/minicart/3.0.6/minicart.min.js"></script>
+				<script>
+				    paypal.minicart.render();
+				</script>
+
+		
+		<p>You can click below to see the location using Google Map<p>
+		<a href="/books/googlemap/{.google}" class="button1" target="_blank">GoogleMap</a>
+	</div>
+	</div>
+	{/mombasas}
+{/body}

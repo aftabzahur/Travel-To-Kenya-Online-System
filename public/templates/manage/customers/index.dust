@@ -1,0 +1,43 @@
+{>"layouts/manage" /}
+
+{<body}
+	<h2>Customer</h2>
+	<p>Click the button to print the current page.</p>
+
+	<button onclick="myFunction()">Print this page</button>
+
+	<script>
+	function myFunction() {
+    	window.print();
+	}
+	</script>
+	 <table>
+	  <thead>
+	    <tr>
+	      <th width="200">Customer Name</th>
+	      <th width="200">Origin</th>
+	      <th width="150">Email</th>
+	      <th width="150">Duration of Stay</th>
+	      <th width="150">Check in date</th>
+	      <th width="180"></th>
+	      <th width="180"></th>
+	      <th width="180"></th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  {#customers}
+	    <tr>
+	      <td>{.customername}</td>
+	      <td>{.origin}</td>
+	      <td>{.email}</td>
+	      <td>{.stayduration}</td>
+	      <td>{.check_in_date}</td>
+	      <td><a class="button tiny" href="/manage/customers/email/{._id}">Send Email</a></td>
+	      <td><a class="button tiny" href="/manage/customers/report/{._id}">Show Report</a></td>
+	      <td><a class="button tiny alert removeCustomers" data-id="{._id}" href="#">Delete Request</a></td>
+	      <td></td>
+	   {/customers}
+	    </tr>
+	  </tbody>
+	</table>
+{/body}

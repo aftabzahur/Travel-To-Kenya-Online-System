@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="/css/app.css">
     	<link rel="stylesheet" href="/css/foundation.css">
     	<link rel="stylesheet" href="/css/style.css">
+        <script src='build/pdfmake.min.js'></script>
+        <script src='build/vfs_fonts.js'></script>
     </head>
     <body>
     <div class="row">
@@ -21,9 +23,14 @@
     			<section class="top-bar-section">
     				<ul class="left">
     					<li><a href="/manage">Dashboard</a></li>
-    					<li><a href="/manage/books">Books</a></li>
+    					<!--<li><a href="/manage/books">Packages</a></li>-->
     					<li><a href="/manage/categories">Categories</a></li>
-    					<li><a href="/" target="_blank">View Website</a></li>
+    					<li><a href="/manage/mombasas">Mombasa Package</a></li>
+                        <li><a href="/manage/kisumus">Kisumu Package</a></li>
+                        <li><a href="/manage/nairobis">Nairobi Package</a></li>
+                        <li><a href="/manage/mombasahotels">Mombasa Hotel</a></li>
+                        <li><a href="/manage/customers">Customer Hotel Booking</a></li>
+    					<li><a href="/" >Log Out</a></li>
     				</ul>
     			</section>
     		</nav>
@@ -49,6 +56,25 @@
         <script src="/js/vendor/jquery.js"></script>
         <script src="/js/foundation.min.js"></script>
     	<script src="/js/main.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <script>
+            $(document).ready(function(){
+                var from,to,subject,text;
+                $("#send_email").click(function(){      
+                    to=$("#to").val();
+                    subject=$("#subject").val();
+                    text=$("#content").val();
+                    $("#message").text("Sending E-mail...Please wait");
+                    $.get("http://localhost:8000/manage/customers/send",{to:to,subject:subject,text:text},function(data){
+                    if(data=="sent")
+                    {
+                        $("#message").empty().html("<p>Email is been sent at "+to+" .</p>");
+                    }
+
+            });
+                });
+            });
+            </script>
     	<script>
     		$(document).foundation();
     	</script>

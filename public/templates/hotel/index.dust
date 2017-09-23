@@ -1,0 +1,48 @@
+{>"layouts/master" /}
+
+{<body}
+<h3>Mombasa Hotels</h3>
+{#mombasahotels}
+<div class="large-3 columns book">
+      <img src="/img/{.cover}">
+      <h4>{.hotelname}</h4>
+      <p>{.description}</p>
+      <p>{.hotelrating}</p>
+      <div class="price">Special Hotel Booking per night at <span>${.price}</span></div>
+      <br>
+      <a href="/hotel/mombasahotels/details/{._id}" class="button small">Hotel Details</a>
+    </div>
+{/mombasahotels}
+
+ <br>
+
+ <h3>Kisumu Hotels</h3>
+
+{#kisumuhotels}
+<div class="large-3 columns book">
+      <img src="/img/{.cover}">
+      <h4>{.hotelname}</h4>
+      <p>{.hoteldescription}</p>
+      <p>{.hotelrating}</p>
+      <div class="price">Special Hotel Booking per night at <span>${.price}</span></div>
+      <br>
+      <a href="/hotel/mombasahotels/details/{._id}" class="button small">Hotel Details</a>
+    </div>
+{/kisumuhotels}
+
+
+<h3>Nairobi Hotels</h3>
+
+{#nairobihotels}
+<div class="large-3 columns book">
+      <img src="/img/{.cover}">
+      <h4>{.hotelname}</h4>
+      <p>{.hoteldescription}</p>
+      <p>{.hotelrating}</p>
+      <div class="price">Special Hotel Booking per night at <span>${.price}</span></div>
+      <br>
+      <a href="/hotel/mombasahotels/details/{._id}" class="button small">Hotel Details</a>
+    </div>
+{/nairobihotels}
+
+{/body}

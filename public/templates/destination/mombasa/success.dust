@@ -1,0 +1,84 @@
+{>"layouts/master" /}
+
+{<body}
+
+<p>Thank You for Booking with Travel To Kenya Online System, Now the only thing that is remaining is to Pay the Billing and this can be done by first choosing the category of your booking and Add it to cart and finally check it out by paying the bill through our PayPal account.</p>
+
+
+
+<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                <fieldset>
+                    <input type="hidden" name="cmd" value="_cart" />
+                    <input type="hidden" name="add" value="1" />
+                    <input type="hidden" name="business" value="example@minicartjs.com" />
+                    <input type="hidden" name="item_name" value="Guided Tour Booking for Diani Beach" />
+                    <input type="hidden" name="quantity" value="1" />
+                    <input type="hidden" name="currency_code" value="USD" />
+                    <input type="hidden" name="return" value="http://localhost:8000" />
+                    <input type="hidden" name="cancel_return" value="http://localhost:8000" />
+                    <strong>Guided Tour Booking for Diani Beach</strong>
+                    <ul>
+                        <li><label>Category
+							<select name="os0">
+								<option value="One Person Package">One Person Package for $90</option>
+								<option value="Honeymoon Package">Honeymoon Package for $160</option>
+								<option value="Family Package">Family Package for $285</option>
+							</select>
+						</label>	
+                            
+                            <input type="hidden" name="on0" value="Type" />
+                            <input type="hidden" name="option_select0" value="One Person Package" />
+                            <input type="hidden" name="option_amount0" value="90" />
+                            <input type="hidden" name="option_select1" value="Honeymoon Package" />
+                            <input type="hidden" name="option_amount1" value="160" />
+                            <input type="hidden" name="option_select2" value="Family Package" />
+                            <input type="hidden" name="option_amount2" value="285" />
+                        </li>
+                    </ul>
+                    <input type="submit" name="submit" value="Add to cart" class="button" />
+                </fieldset>
+            </form>
+
+            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" class="last">
+                <fieldset>
+                    <input type="hidden" name="business" value="example@minicartjs.com" />
+                    <input type="hidden" name="cmd" value="_cart" />
+                    <input type="hidden" name="display" value="1" />
+                    <input type="submit" name="submit" value="View your cart" class="button" />
+                </fieldset>
+            </form>
+
+
+<hr/>
+<h3>You can Book the following Hotels which are near Diani Beach</h3>
+<table>
+	  <thead>
+	    <tr>
+	      <th width="200">Image</th>
+	      <th width="200">Hotel Name</th>
+	      <th width="200">Description</th>
+	      <th width="150">Price per Night</th>
+	      <th width="150">Book Hotel</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  {#mombasahotels}
+	    <tr>
+	      <td><img src="/img/{.cover}"></td>
+	      <td>{.hotelname}</td>
+	      <td>{.description}</td>
+	      <td><span>${.price}</span></td>
+	      <td><a href="/hotel/mombasahotels/details/{._id}" class="button small">Hotel Details</a></td>
+	      
+	   {/mombasahotels}
+	    </tr>
+	  </tbody>
+	</table>
+
+             <script src="//cdnjs.cloudflare.com/ajax/libs/minicart/3.0.6/minicart.min.js"></script>
+				<script>
+				    paypal.minicart.render();
+				</script>
+
+	
+{/body}
